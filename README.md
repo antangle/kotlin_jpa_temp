@@ -76,20 +76,20 @@ toString, equals, copy 함수를 자동생성해줌
 ```
 
  - Safe Call
-   ```
-   fun lengthString(maybeString: String?): Int? = maybeString?.length
+```
+fun lengthString(maybeString: String?): Int? = maybeString?.length
 
-   fun main() { 
-        var nullString: String? = null
-        println(lengthString(nullString))
-        // null
-   }
+fun main() { 
+    var nullString: String? = null
+    println(lengthString(nullString))
+    // null
+}
    ```
    ?를 return type에 붙여서 만약 저 변수로 인해 null 에러가 뜨면 그냥 null을 리턴해준다.
 - Elvis Operator
-  ```
-  println(nullString?.length ?: 0)
-  ```
+```
+println(nullString?.length ?: 0)
+```
   만약 return값이 null이라면 default를 정해준다.
 
 
